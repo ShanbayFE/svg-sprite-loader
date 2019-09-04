@@ -31,7 +31,7 @@ module.exports = function (content) {
 
   // Calculate sprite symbol id
   var id = loaderUtils.interpolateName(this, config.name, {
-    context: this.options.context,
+    context: this.options.context || this.context,
     content: content,
     regExp: config.regExp
   });
